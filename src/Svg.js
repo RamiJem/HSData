@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import { select, axisBottom, scaleLinear, axisLeft, range } from 'd3'
 import { useResizeObserver } from './ResizeObserver'
 
-export const Coordinate = ({data, visible}) => {
+export const Svg = ({data, visible}) => {
     const svgRef = useRef()
     const svgWrapperRef = useRef()
     const dimensions = useResizeObserver(svgWrapperRef)

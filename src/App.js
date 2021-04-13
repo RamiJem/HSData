@@ -1,5 +1,5 @@
 import './App.css';
-import { Coordinate } from './Coordinate'
+import { Svg } from './Svg'
 import { useEffect, useState, useRef} from 'react';
 import { randomNormal, range } from 'd3'
 
@@ -71,7 +71,7 @@ function App() {
  
   return (
     <>
-      <Coordinate data={data} visible={visible}/>
+      <Svg data={data} visible={visible}/>
       <h1>Matrices, Linear Transformations & Deep Learning</h1>
         <div className="flex-container">       
           <div className="card">
