@@ -55,8 +55,8 @@ const generateData = (num, redX, redY, blueX, blueY) => {
 }
 const initialData = generateData(
                       400,
-                      () => max([0, randomNormal(3.5, 1.5)()()]),
-                      () => max([0, randomNormal(3.5, 1.5)()()]),
+                      () => max([0, randomNormal(3.5, 1.5)()]),
+                      () => max([0, randomNormal(3.5, 1.5)()]),
                       () => min([0, randomNormal(-3, 1.5)()]),
                       () => min([0, randomNormal(-3, 1.5)()]))
 const secondData = generateData(
