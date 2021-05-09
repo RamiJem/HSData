@@ -76,34 +76,30 @@ function App() {
         <div className="flex-container">       
           <div className="card">
             <p> 
-              Linear transformations are an integral part of deep learning, 
-              and matrix multiplication is how computers represent and compute linear transformations under the hood. 
-              So what are linear transformations? 
+              Let's use a very simplified neural net as our starting point to see how finding the right weights for our inputs is analogous to finding the right linear transformations to classify our data.
+              We'll start off with something very simple: a <a href="https://en.wikipedia.org/wiki/Linear_classifier">linear classifier</a>. 
+              We'll motivate the need for non-linearities and the usefulness of adding layers later on.
             </p>   
           </div>
           <div className="card">
             <p>
-              A linear transformation is a mapping from one vector space (<b>V</b>) to another (<b>W</b>), 
-              that preserves vector addition and scalar multiplication. If we let <b>f</b> represent our mapping from <b>V</b> to <b>W</b>,
-              then <b>f</b>(a+b)=<b>f</b>(a)+<b>f</b>(b) represents our first condition and <b>f</b>(c*a)=c*<b>f</b>(a) our second.
-              <br/><br/>
-              Here c is a scalar, a and b are members of <b>V</b>, and <b>f</b>(a) and <b>f</b>(b) are members of <b>W</b>.
+              If you're not already familiar with how matrices encode linear transformations, here's an excellent <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">video</a> by Grant Sanderson.
+              If we start off with the coordinate system we're all used to from school, we can think of a matrix multplication by some 2x2 matrix <b>A</b> as taking the unit vector along the x-axis to the first column of our matrix <b>A</b> 
+              and taking the unit vector along the y-axis to the second column of our matrix <b>A</b>. If you find this confusing, go and watch the video!
             </p>   
-          </div>
-          <div className="card">
-            <p>Linear transformations preserve some important pieces of structure. It doesn't matter whether we add our vectors before we transform them, or whether we add them up after our transformation - we'll end up in the same place. 
-              Multiplying a vector by some number and then transforming it will give us the same result as transforming it first, and then multiplying it by the same number.
-            </p>
           </div>
           <div className="card">
             <p>Let's see a linear transformation in action. Press the button and see how it affects the circles! </p>
             <button onClick={reduceToXAxis}>Linear Transformation</button> 
           </div>
           <div className="card">
-            <p>Our transformation pushed all of the circles to the x-axis. Did it preserve our two conditions? If we add two points (circles) and take the x coordinate of that circle, is it the same as taking the x coordinates of the two original circles and adding them together? </p>
+            <p>
+              Our transformation pushed all of the circles to the x-axis. What would the matrix representation of this linear transformation look like? Our x-coordinates stayed the same, so the first column of our matrix is (1, 0). 
+              What about the second column? Remember that the second column maps our original y-coordinates. Let's look at the point (0, 1) before our transformation, and notice that it gets mapped to (0, 0) by our transformation. So our second column of <b>A</b> is (0, 0).
+            </p>
           </div>
           <div className="card" ref={ref} >
-            <p>Let's put the circles back to where they started from and see how matrix multiplication ties into all of this.</p>
+            <p>Let's put the circles back to where they started from and look at a more complicated example.</p>
           </div>
         </div>
       </>
