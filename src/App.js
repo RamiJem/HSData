@@ -84,8 +84,7 @@ function App() {
           <div className="card">
             <p>
               If you're not already familiar with how matrices encode linear transformations, here's an excellent <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">video</a> by Grant Sanderson.
-              If we start off with the coordinate system we're all used to from school, we can think of a matrix multplication by some 2x2 matrix <b>A</b> as taking the unit vector along the x-axis to the first column of our matrix <b>A</b> 
-              and taking the unit vector along the y-axis to the second column of our matrix <b>A</b>. If you find this confusing, go and watch the video!
+              If we start off with the coordinate system we're all used to from school, we can think of a matrix multplication by some 2x2 matrix <b>A</b> as taking the unit vector along the x-axis to the first column of our matrix <b>A</b>  and taking the unit vector along the y-axis to the second column of our matrix <b>A</b>. If you find this confusing, go and watch the video!
             </p>   
           </div>
           <div className="card">
