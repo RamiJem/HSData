@@ -2,6 +2,7 @@ import './App.css';
 import { Svg } from './Svg'
 import { useEffect, useState, useRef} from 'react';
 import { randomNormal, range, max, min } from 'd3'
+import { Helmet } from 'react-helmet'
 
 // Intersection observer for scrolling behavior
 function useOnScreen(options) {
@@ -70,11 +71,7 @@ function App() {
   const [data, setData] = useState(initialData)
   const [ref, visible] = useOnScreen({threshold: 1})
   
-  // useEffect(() => {
-  //   if (visible) {
-  //     setData(data => data.sort((a,b)=>a.key-b.key).map((datum, index) => ({...datum, y: initialData[datum.key].y })))
-  //   }
-  // }, [visible])
+  
   useEffect(() => {
     if (visible) {
       setData(data => secondData)
@@ -94,6 +91,9 @@ function App() {
   } 
   return (
     <>
+    <Helmet>
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1f876631fed842949bb912fb20348d67"}'></script>
+    </Helmet>
     <Svg data={data} visible={visible}/>
     <h1>Matrices, Linear Transformations & Deep Learning</h1>
       <div className="flex-container">       
